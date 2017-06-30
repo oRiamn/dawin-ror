@@ -1,7 +1,8 @@
-<%=@post.title%> <%=@post.header%> 
+<%=image_tag @post.picture.url%> 
+<h1><%=@post.title%> By <%=@post.author%> (published on the <%=@post.publishDate%>)</h1>
+<p><%=@post.header%></p> 
 <%=@post.content%>
 
-<%=image_tag @post.picture.url%> 
 <br/>
 <%=link_to "Welcome page", [:blog,:posts]%>
 <br/>

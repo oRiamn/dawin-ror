@@ -3,7 +3,7 @@
 	<div>
 		<%=link_to [:blog, post] do%>
 				<%=image_tag post.picture.thumb.url%> 
-				<h1><%=post.title%> (<%=post.publishDate%>)</h1>
+				<h1><%=post.title%> (published on the <%=post.publishDate%>)</h1>
 				<p><%=post.header%></p> 
 				<p>By <%=post.author%></p>
 		<%end%>
