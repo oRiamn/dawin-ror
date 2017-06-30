@@ -12,7 +12,7 @@ class Blog::PostsController < ApplicationController
 	end
 	def create
 		@post = Post.new
-		@post.update_attributes params[:post].permit(:title, :header, :content, :picture)
+		@post.update_attributes params[:post].permit(:title, :header, :publishDate, :author, :content, :picture)
 		if @post.save
 			redirect_to [:blog, @post]
 		else
@@ -25,7 +25,7 @@ class Blog::PostsController < ApplicationController
 	end
 	def update
 		@post = Post.find(params[:id])
-		@post.update_attributes params[:post].permit(:title, :header, :content, :picture)
+		@post.update_attributes params[:post].permit(:title, :header, :publishDate, :author, :content, :picture)
 		if @post.save
 			redirect_to [:blog, @post]
 		else
