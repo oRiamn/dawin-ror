@@ -1,5 +1,5 @@
-class Backend::PostsController < ApplicationController
-	before_action :authenticate_user!
+class Blog::PostsController < ApplicationController
+	before_action :authenticate_user!, :except => [:index, :show]
 
   	def index
   		@posts = Post.all
@@ -14,7 +14,7 @@ class Backend::PostsController < ApplicationController
 		@post = Post.new
 		@post.update_attributes params[:post].permit(:title, :header, :content, :picture)
 		if @post.save
-			redirect_to [:backend, @post]
+			redirect_to [:blog, @post]
 		else
 			render "new"
 		end
@@ -27,7 +27,7 @@ class Backend::PostsController < ApplicationController
 		@post = Post.find(params[:id])
 		@post.update_attributes params[:post].permit(:title, :header, :content, :picture)
 		if @post.save
-			redirect_to [:backend, @post]
+			redirect_to [:blog, @post]
 		else
 			render "edit"
 		end
@@ -35,7 +35,7 @@ class Backend::PostsController < ApplicationController
 	def destroy
 		@post = Post.find(params[:id])
 		if @post.destroy
-			redirect_to [:backend, :posts]
+			redirect_to [:blog, :posts]
 		else
 			render "index"
 		end

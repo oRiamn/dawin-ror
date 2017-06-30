@@ -1,4 +1,4 @@
-<%=form_for @post, url:[:backend,@post] do |f|%>
+<%=form_for @post, url:[:blog,@post] do |f|%>
 	Title : <%=f.text_field :title%> 
 	<%=@post.errors.messages[:title][0]%>
 	<br/>

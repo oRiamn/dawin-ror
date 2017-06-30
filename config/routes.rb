@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "backend/posts#index"
+  root to: "blog/posts#index"
 
-  namespace :backend do
+  namespace :blog do
     resources :posts
   end
 end

@@ -1,0 +1,11 @@
+<ul>
+<%@posts.each do |post| %>
+	<li>
+		<%=image_tag post.picture.thumb.url%> 
+		<%=post.title%>, <%=post.header%> years old. Voici le <%=link_to "lien", [:blog, post]%> vers ton profil. 
+		<%=link_to "Edit", edit_blog_post_path(post)%>
+		<%=link_to "Destroy", [:blog, post], method: :delete%>
+	</li>
+<%end%>
+</ul>
+<%=link_to "New Post", [:new, :blog, :post]%>
