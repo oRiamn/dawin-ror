@@ -1,3 +1,5 @@
 /config/database.yml 
 /tmp/*
 /public/uploader/*
+/log/development.log
+
