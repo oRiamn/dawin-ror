@@ -35,7 +35,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'devise'
+gem 'devise', github: 'plataformatec/devise'
 gem 'carrierwave'
 gem 'mini_magick'
 

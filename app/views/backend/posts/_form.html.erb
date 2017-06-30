@@ -1,0 +1,11 @@
+<%=form_for @post, url:[:backend,@post] do |f|%>
+	Title : <%=f.text_field :title%> 
+	<%=@post.errors.messages[:title][0]%>
+	<br/>
+	Header : <%=f.text_field :header%><br/>
+	<br/>
+	Picture : <%=f.file_field :picture%><br/>
+	<br/>
+	Content : <%=f.text_field :content%><br/>
+	<%=f.submit%>
+<%end%>
