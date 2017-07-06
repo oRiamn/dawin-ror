@@ -1,5 +1,7 @@
 <%=image_tag @post.picture.url%> 
-<h1><%=@post.title%> By <%=@post.author%> (published on the <%=@post.publishDate%>)</h1>
+<h1><%=@post.title%> By <%= link_to @post.user.fullname, blog_user_path(@post.user)%>
+</h1>
+<h2>(published on the <%=@post.publishDate%>)</h2>
 <p><%=@post.header%></p> 
 <%=@post.content%>
 

@@ -13,7 +13,7 @@ class Blog::PostsController < ApplicationController
 	def create
 		@post = Post.new
 		@post.update_attributes params[:post].permit(:title, :header, :publishDate, :author, :content, :picture)
-		@post.author = current_user.id
+		@post.user_id = current_user.id
 		@post.publishDate = DateTime.now
 		if @post.save
 			redirect_to [:blog, @post]
