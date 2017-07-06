@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170706125519) do
+ActiveRecord::Schema.define(version: 20170706134832) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.text     "header"
     t.datetime "publishDate"
     t.string   "picture"
-    t.integer  "author"
+    t.integer  "user_id"
     t.text     "content"
   end
 
