@@ -3,6 +3,7 @@ class Blog::PostsController < ApplicationController
 
   	def index
   		@posts = Post.all
+  		@users = User.all
   	end
   	def show
 		@post = Post.find(params[:id])
