@@ -1,4 +1,6 @@
-<ul>
+<%if current_user.present?%>
+	<%=link_to "New Post", [:new, :blog, :post]%>
+<%end%>
 <%@posts.each do |post| %>
 	<div>
 		<%=link_to [:blog, post] do%>
@@ -16,7 +18,4 @@
 		<%end%>
 	</div>
 <%end%>
-</ul>
-<%if current_user.present?%>
-	<%=link_to "New Post", [:new, :blog, :post]%>
-<%end%>
+<%=will_paginate @posts%>

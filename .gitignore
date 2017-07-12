@@ -2,4 +2,4 @@
 /tmp/*
 /public/uploader/*
 /log/development.log
-
+/public/uploads/*

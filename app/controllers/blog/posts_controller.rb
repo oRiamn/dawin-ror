@@ -2,7 +2,7 @@ class Blog::PostsController < ApplicationController
 	before_action :authenticate_user!, :except => [:index, :show]
 
   	def index
-  		@posts = Post.all
+  		@posts = Post.paginate :per_page => 5, :page => params[:page]
   	end
   	def show
 		@post = Post.find(params[:id])
