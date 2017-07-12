@@ -10,14 +10,14 @@
   </head>
 
   <body>
-  	<%if user_signed_in?%>
-		Hello <%=current_user.firstname%> <%=current_user.lastname%>
-		<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-		<br/> 
-	<%else%>
-		<%= link_to('Login', new_user_session_path)  %>
-		<br/>  
-	<%end%>
+    <header>
+  	  <%if user_signed_in?%>
+		    <p>Hello <span><%=current_user.fullname%></span></p>
+		    <p id="login"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></p>
+	    <%else%>
+		    <p id="login"><%= link_to('Login', new_user_session_path)  %></p>
+	    <%end%>
+    </header>
     <%= yield %>
   </body>
 </html>
