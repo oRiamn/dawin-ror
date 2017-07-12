@@ -27,7 +27,7 @@ header span
 	font-weight: bold;
 }
 
-#newPost
+#newPost, #welcomePage
 {
 	font-size: 1.5em;
 	padding-bottom:15px;
