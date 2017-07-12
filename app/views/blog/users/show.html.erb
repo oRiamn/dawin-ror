@@ -1,3 +1,4 @@
+<%=link_to "Welcome page", [:blog,:posts]%>
 Welcome on <%=@user.firstname%> <%=@user.lastname%>'s profile !
 <br/>
 <%if @user.age.present? %>
@@ -11,7 +12,7 @@ Welcome on <%=@user.firstname%> <%=@user.lastname%>'s profile !
 His posts :
 <br/>
 
-<%@user.posts.each do |post|%>
+<%@posts.each do |post|%>
 	<div>
 		<%=link_to [:blog, post] do%>
 				<%=image_tag post.picture.thumb.url%> 
@@ -24,4 +25,4 @@ His posts :
 	</div>
 <%end%>
 <br/>
-<%=link_to "Welcome page", [:blog,:posts]%>
+<%=will_paginate @posts%>
