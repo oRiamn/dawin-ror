@@ -1,6 +1,22 @@
-body 
+
+/* BASIC */
+
+html
 {
-  font-family: Helvetica, Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  margin:0;
+  padding:0;
+  background: #f0f4f5;
+}
+
+body
+{
+   height: 100vh;
+   color: #959da6;
+   font-family: "Lato";
+   line-height: 165%;
+   font-size: 1em;
 }
 
 header
@@ -34,22 +50,108 @@ header span
 	margin:0;
 }
 
-#posts
-{
-	width:1200px;
-	height:800px;
-	margin:auto;
+h1 {
+   color: #1a1a1a;
+   font-size: 1.75em;
+   font-size: 28px;
+   font-style: normal;
+   font-weight: 700;
+   margin-top: 0;
+   line-height: 130%;
 }
 
-#post
-{
-	float:left;
-	width:400px;
-	height:400px;
-	text-align:center;
+a {
+   color: #cc2929;
+   display: inline-block;
+   text-decoration: none;
+   font-weight: 400;
+}
 
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -o-border-radius: 2px;
+a:hover
+{
+	text-decoration: underline;
+}
+
+.posts {
+   width: 1300px;
+   height:1000px;
+   margin: auto;
+}
+
+.post {
+   float:left;
+   background: #fff;
+   width: 400px;
+   height:450px;
+   margin: 15px;
+   text-align:center;
+}
+
+.post:hover {
+   box-shadow: 0 10px 20px 5px rgba(1, 1, 1, 0.1);
+   -webkit-transform: scale(1.1);
+   transform: scale(1.1);
+   transition: box-shadow 300ms, transform 300ms;
+   z-index: 1;
+}
+
+.post .picture {
+   color: white;
+   height: 100px;
+   width:100%;
+}
+
+.title {
+	color: black;
+	display: inline-block;
+	font-size: 2em;
+	font-weight: 700;
+	text-decoration: none;
+	margin-top:7px;
+}
+
+.post .content {
+   background: #ffffff;
+   -webkit-box-shadow: 0 2px 1px 1px rgba(1, 1, 1, 0.05);
+   box-shadow: 0 2px 1px 1px rgba(1, 1, 1, 0.05);
+}
+
+.post .content .header
+{
+	height:80px;
+	overflow:auto;
+	margin-bottom: 40px;
+}
+
+p > a
+{
+	font-size:1.1em;
+	font-weight: bold;
+}
+
+.post .postMeta {
+   font-size: 0.8em;
+}
+
+.post .postMeta .comments {
+   margin-left: 10px;
+}
+
+*:focus {
+   outline: none;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+.pagination
+{
+	font-size:3em;
+	text-align:center;
+}
+
+#editDelete
+{
+	font-size:1.5em;
 }

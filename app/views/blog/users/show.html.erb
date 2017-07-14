@@ -1,4 +1,4 @@
-<p id="welcomePage"><%=link_to "Welcome page", [:blog,:posts]%></p>
+<p id="welcomePage"><%=link_to "Return to the home page", [:blog,:posts]%></p>
 Welcome on <%=@user.firstname%> <%=@user.lastname%>'s profile !
 <br/>
 <%if @user.age.present? %>
@@ -12,23 +12,31 @@ Welcome on <%=@user.firstname%> <%=@user.lastname%>'s profile !
 His posts :
 <br/>
 
-<div id="posts">
+<div class="posts">
 	<%@posts.each do |post| %>
-		<div id="post">
+		<article class="post">
 			<%=link_to [:blog, post] do%>
-					<%=image_tag post.picture.thumb.url%> 
-					<br/>
-					<h1><%=post.title%></h1>
+				<center>
+					<div class="picture"><%=image_tag post.picture.thumb.url%></div>
+					<h1 class="title"><%=post.title%></h1>
+				</center>
 			<%end%>
-					<h2> <%=post.publishDate.strftime('%d/%m/%Y,%H:%M')%></h2>
-					<p><%=post.header%></p> 
-					<p>By <%= link_to post.user.fullname, blog_user_path(post.user)%></p>
-			
+			<div class="content">
+				<div class="postMeta">
+		            <span class="timestamp">
+		                <i class="fa fa-clock-o" aria-hidden="true"></i> <%=post.publishDate.strftime('%d/%m/%Y, %H:%M')%>
+		             </span>
+		        </div>
+				<p class="header"><%=post.header%></p> 
+				<p>By <%= link_to post.user.fullname, blog_user_path(post.user)%></p>
 			<%if current_user.present? && post.user_id == current_user.id %>
-				<%=link_to "Edit", edit_blog_post_path(post)%>
-				<%=link_to "Delete", [:blog, post], method: :delete%>
+				<div id="editDelete">
+					<%=link_to "Edit", edit_blog_post_path(post)%>
+					<%=link_to "Delete", [:blog, post], method: :delete%>
+				</div>
 			<%end%>
-		</div>
+			</div>
+		</article>
 	<%end%>
-	<center><%=will_paginate @posts%></center>
+	<%=will_paginate @posts%>
 </div>

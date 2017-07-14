@@ -1,4 +1,4 @@
-<p id="welcomePage"><%=link_to "Welcome page", [:blog,:posts]%></p>
+<p id="welcomePage"><%=link_to "Return to the home page", [:blog,:posts]%></p>
 <%=image_tag @post.picture.url%> 
 <h1><%=@post.title%> By <%= link_to @post.user.fullname, blog_user_path(@post.user)%>
 </h1>
