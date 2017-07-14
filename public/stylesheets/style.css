@@ -177,7 +177,7 @@ p > a
    background: #fff;
 }
 
-.new_post, .edit_post, .new_user form 
+.new_post form, .edit_post form, .new_user form 
 {
    border-color:#dfdfdf;
    border-width:1px;
@@ -189,15 +189,15 @@ p > a
    background:white
 }
 
-.new_post, .edit_post, .new_user label 
+.new_post label, .edit_post label, .new_user label 
 {
    color:#888;
    font-family:helvetica;
    text-transform:uppercase;
-   font-size:12px;
+   font-size:0.9em;
 }
 
-.new_post, .edit_post, .new_user input[type='text'] 
+.new_post input[type='text'], .edit_post input[type='text'], .new_user input[type='text'] 
 {
    display:block;
    margin-bottom:20px;
@@ -212,25 +212,25 @@ p > a
    transition: all ease-in-out .3s;
 }
 
-.new_post, .edit_post, .new_user input[type='text'] .error 
+.new_post input[type='text'] .error, .edit_post input[type='text'] .error, .new_user input[type='text'] .error 
 {
    border-color:red;
    background:lighten(red,45%);
 }
   
-.new_post, .edit_post, .new_user input[type='text']:hover 
+.new_post input[type='text']:hover, .edit_post input[type='text']:hover, .new_user input[type='text']:hover 
 {
    border-color:#e1e1e1;
    background:#f1f1f1;
 }
   
-.new_post, .edit_post, .new_user input[type='text']:focus 
+.new_post input[type='text']:focus, .edit_post input[type='text']:focus, .new_user input[type='text']:focus 
 {
    background: lighten(#30c3c0,45%);
    border-color:#30c3c0;
 }
 
-.new_post, .edit_post, .new_user input[type=submit] 
+.new_post input[type=submit], .edit_post input[type=submit], .new_user input[type=submit] 
 {
    border-width:0;
    background:#cc2929;
@@ -244,7 +244,7 @@ p > a
    transition: all ease-in-out .2s;
 }
 
-.new_post, .edit_post, .new_user input[type=submit]:hover 
+.new_post input[type=submit]:hover, .edit_post input[type=submit]:hover, .new_user input[type=submit]:hover 
 {
    background: darken(#cc2929,5%);
    box-shadow: 1px 2px 5px rgba(0,0,0,0.15);
