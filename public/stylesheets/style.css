@@ -164,7 +164,7 @@ p > a
   background: #fff;
 }
 
-.new_post, .edit_post form {
+.new_post, .edit_post, .new_user form {
   border-color:#dfdfdf;
   border-width:1px;
   border-style:solid;
@@ -175,14 +175,14 @@ p > a
   background:white
 }
 
-.new_post, .edit_post label {
+.new_post, .edit_post, .new_user label {
   color:#888;
   font-family:helvetica;
   text-transform:uppercase;
   font-size:12px;
 }
 
-.new_post, .edit_post input[type='text'] {
+.new_post, .edit_post, .new_user input[type='text'] {
   display:block;
   margin-bottom:20px;
   width:100%;
@@ -196,22 +196,22 @@ p > a
   transition: all ease-in-out .3s;
 }
 
-.new_post, .edit_post input[type='text'] .error {
+.new_post, .edit_post, .new_user input[type='text'] .error {
     border-color:red;
     background:lighten(red,45%);
   }
   
-.new_post, .edit_post input[type='text']:hover {
+.new_post, .edit_post, .new_user input[type='text']:hover {
     border-color:#e1e1e1;
     background:#f1f1f1;
   }
   
-.new_post, .edit_post input[type='text']:focus {
+.new_post, .edit_post, .new_user input[type='text']:focus {
     background: lighten(#30c3c0,45%);
     border-color:#30c3c0;
   }
 
-.new_post, .edit_post input[type=submit] {
+.new_post, .edit_post, .new_user input[type=submit] {
   border-width:0;
   background:#cc2929;
   color:white;
@@ -223,8 +223,122 @@ p > a
   letter-spacing:1px;
   transition: all ease-in-out .2s;
 }
-.new_post, .edit_post input[type=submit]:hover {
+.new_post, .edit_post, .new_user input[type=submit]:hover {
     background: darken(#cc2929,5%);
     box-shadow: 1px 2px 5px rgba(0,0,0,0.15);
     cursor:pointer;
   }
+
+ .new_user input[type='email'] {
+  display:block;
+  margin-bottom:20px;
+  width:100%;
+  box-sizing:border-box;
+  border-width:0 0 2px 0;
+  border-color:#f1f1f1;
+  background:#f9f9f9;
+  outline:none;
+  padding:15px 0 15px 10px;
+  font-size:15px;
+  transition: all ease-in-out .3s;
+}
+
+.new_user input[type='email'] .error {
+    border-color:red;
+    background:lighten(red,45%);
+  }
+  
+.new_user input[type='email']:hover {
+    border-color:#e1e1e1;
+    background:#f1f1f1;
+  }
+  
+.new_user input[type='email']:focus {
+    background: lighten(#30c3c0,45%);
+    border-color:#30c3c0;
+  }
+
+  .new_user input[type='password'] .error {
+    border-color:red;
+    background:lighten(red,45%);
+  }
+  
+.new_user input[type='password']:hover {
+    border-color:#e1e1e1;
+    background:#f1f1f1;
+  }
+  
+.new_user input[type='password']:focus {
+    background: lighten(#30c3c0,45%);
+    border-color:#30c3c0;
+  }
+
+ .new_user input[type='password'] {
+  display:block;
+  margin-bottom:20px;
+  width:100%;
+  box-sizing:border-box;
+  border-width:0 0 2px 0;
+  border-color:#f1f1f1;
+  background:#f9f9f9;
+  outline:none;
+  padding:15px 0 15px 10px;
+  font-size:15px;
+  transition: all ease-in-out .3s;
+ }
+   .new_user input[type='number'] .error {
+    border-color:red;
+    background:lighten(red,45%);
+  }
+  
+.new_user input[type='number']:hover {
+    border-color:#e1e1e1;
+    background:#f1f1f1;
+  }
+  
+.new_user input[type='number']:focus {
+    background: lighten(#30c3c0,45%);
+    border-color:#30c3c0;
+  }
+
+ .new_user input[type='number'] {
+  display:block;
+  margin-bottom:20px;
+  width:100%;
+  box-sizing:border-box;
+  border-width:0 0 2px 0;
+  border-color:#f1f1f1;
+  background:#f9f9f9;
+  outline:none;
+  padding:15px 0 15px 10px;
+  font-size:15px;
+  transition: all ease-in-out .3s;
+}
+
+.userForm
+{
+  margin-top:10px;
+  padding:20px;
+  width:40%;
+  background: #fff;
+}
+
+.postShow
+{
+	margin:auto;
+	width:85%;
+	background: #fff;
+	padding:60px;
+}
+
+.postShow .content
+{
+	font-size:1.7em;
+	text-align: justify;
+    text-justify: inter-word;
+}
+
+.postShow .content .header
+{
+	font-style: italic;
+}

@@ -1,45 +1,37 @@
 <h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
+<div class="userForm">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
+    <label for="user[email]">Email</label>
     <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  FirstName : 
-  <br/><%=f.text_field :firstname%> 
-  <%=@user.errors.messages[:firstname][0]%>
-  <br/>
-  LastName : 
-  <br/><%=f.text_field :lastname%><br/>
-  <%=@user.errors.messages[:lastname][0]%>
-  Age : 
-  <br/><%=f.number_field :age%>
-  <%=@user.errors.messages[:age][0]%>
-  <br/>
-  Avatar :
-  <br/><%=f.file_field :avatar%><br/>
-  <%=@user.errors.messages[:avatar][0]%>
-  <br/>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
+    <label for="post[firstname]">Firstname</label>
+    <%=f.text_field :firstname%>
+    <%=@user.errors.messages[:firstname][0]%>
+    <label for="post[lastname]">Lastname</label>
+    <%=f.text_field :lastname%>
+    <%=@user.errors.messages[:lastname][0]%>
+    <label for="post[age]">Age</label>
+    <%=f.number_field :age%>
+    <%=@user.errors.messages[:age][0]%>
+    <label for="post[avatar]">Avatar</label>
+    <%=f.file_field :avatar%>
+    <%=@user.errors.messages[:avatar][0]%>
+    <br/><br/>
+    <label for="user[password]">Password</label>
     <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <label for="user[password]">Password confirmation</label>
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+    <% if devise_mapping.rememberable? -%>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end -%>
+    <br/>
+    <div class="actions">
+      <%= f.submit "Sign up" %>
+    </div>
+  <% end %>
+</div>
 
 <%= render "devise/shared/links" %>
