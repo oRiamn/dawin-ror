@@ -121,6 +121,11 @@ a:hover
 	height:80px;
 	overflow:auto;
 	margin-bottom: 40px;
+	text-align:justify;
+	width:85%;
+	margin-left:auto;
+	margin-right:auto;
+	padding-right:10px;
 }
 
 p > a
@@ -341,4 +346,9 @@ p > a
 .postShow .content .header
 {
 	font-style: italic;
+}
+
+#presentation
+{
+	font-size: 1.2em;
 }

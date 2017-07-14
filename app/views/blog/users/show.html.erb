@@ -1,17 +1,15 @@
 <p id="welcomePage"><%=link_to "Return to the home page", [:blog,:posts]%></p>
-Welcome on <%=@user.firstname%> <%=@user.lastname%>'s profile !
-<br/>
-<%if @user.age.present? %>
-	His age : <%=@user.age%> years old.
-<%end%>
-<br/>
-<%if @user.avatar.present? %>
-	His face : <%=image_tag @user.avatar.thumb.url%>
-<%end%>
-<br/>
-His posts :
-<br/>
-
+<div id="presentation">
+	<p>Welcome on <%=@user.fullname%>'s profile !</p>
+	<%if @user.avatar.present? %>
+		<p>Avatar : <%=image_tag @user.avatar.thumb.url%></p>
+	<%end%>
+	<%if @user.age.present? %>
+		<p>Age : <%=@user.age%> years old.</p>
+	<%end%>
+	<br/>
+	<p><%=@user.fullname%>'s posts :</p>
+</div>
 <div class="posts">
 	<%@posts.each do |post| %>
 		<article class="post">
