@@ -1,11 +1,16 @@
-<%=form_for @post, url:[:blog,@post] do |f|%>
-	Title : <%=f.text_field :title%> 
-	<%=@post.errors.messages[:title][0]%>
-	<br/>
-	Header : <%=f.text_field :header%><br/>
-	<br/>
-	Picture : <%=f.file_field :picture%><br/>
-	<br/>
-	Content : <%=f.text_field :content%><br/>
-	<%=f.submit%>
-<%end%>
+<p id="welcomePage"><%=link_to "Return to the home page", [:blog,:posts]%></p>
+<div class="form">
+	<%=form_for @post, url:[:blog,@post] do |f|%>
+		<label for="post[title]">Title</label>
+		<%=f.text_field :title%> 
+		<%=@post.errors.messages[:title][0]%>
+		<label for="post[header]">Header</label>
+		<%=f.text_field :header%>
+		<label for="post[content]">Content</label>
+		<%=f.text_field :content%>
+		<label for="post[picture]">Picture</label>
+		<%=f.file_field :picture%>
+		<br/><br/>
+		<%=f.submit%>
+	<%end%>
+</div>

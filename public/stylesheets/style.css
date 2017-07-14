@@ -155,3 +155,76 @@ p > a
 {
 	font-size:1.5em;
 }
+
+.form {
+  margin-top:100px;
+  margin:auto;
+  padding:20px;
+  width:40%;
+  background: #fff;
+}
+
+.new_post, .edit_post form {
+  border-color:#dfdfdf;
+  border-width:1px;
+  border-style:solid;
+  padding:4.5%;
+  display:block;
+  position:relative;
+  box-shadow:1px 3px 3px rgba(0,0,0,0.1);
+  background:white
+}
+
+.new_post, .edit_post label {
+  color:#888;
+  font-family:helvetica;
+  text-transform:uppercase;
+  font-size:12px;
+}
+
+.new_post, .edit_post input[type='text'] {
+  display:block;
+  margin-bottom:20px;
+  width:100%;
+  box-sizing:border-box;
+  border-width:0 0 2px 0;
+  border-color:#f1f1f1;
+  background:#f9f9f9;
+  outline:none;
+  padding:15px 0 15px 10px;
+  font-size:15px;
+  transition: all ease-in-out .3s;
+}
+
+.new_post, .edit_post input[type='text'] .error {
+    border-color:red;
+    background:lighten(red,45%);
+  }
+  
+.new_post, .edit_post input[type='text']:hover {
+    border-color:#e1e1e1;
+    background:#f1f1f1;
+  }
+  
+.new_post, .edit_post input[type='text']:focus {
+    background: lighten(#30c3c0,45%);
+    border-color:#30c3c0;
+  }
+
+.new_post, .edit_post input[type=submit] {
+  border-width:0;
+  background:#cc2929;
+  color:white;
+  text-transform:uppercase;
+  padding:12px 24px;
+  font-size:14px;
+  outline:none;
+  outline:0px;
+  letter-spacing:1px;
+  transition: all ease-in-out .2s;
+}
+.new_post, .edit_post input[type=submit]:hover {
+    background: darken(#cc2929,5%);
+    box-shadow: 1px 2px 5px rgba(0,0,0,0.15);
+    cursor:pointer;
+  }
